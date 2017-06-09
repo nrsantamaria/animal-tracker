@@ -67,6 +67,7 @@ gulp.task('sassBuild', function() {
     .pipe(sass())
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('./build/css'));
+    .pipe(browserSync.stream());
 });
 
 ////////////////////// SERVER //////////////////////
@@ -103,7 +104,11 @@ gulp.task('tsBuild', ['ts'], function(){
 ////////////////////// GLOBAL BUILD TASK //////////////////////
 
 gulp.task('build', ['ts'], function(){
-  // we can use the buildProduction environment variable here later.
+  if (buildProduction) {
+    gulp.start('minifyScripts');
+  } else {
+    gulp.start('jsBrowserify');
+  }
   gulp.start('bower');
   gulp.start('sassBuild');
 });
