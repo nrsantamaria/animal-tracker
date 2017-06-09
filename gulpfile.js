@@ -66,7 +66,7 @@ gulp.task('sassBuild', function() {
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./build/css'));
+    .pipe(gulp.dest('./build/css'))
     .pipe(browserSync.stream());
 });
 
@@ -104,11 +104,6 @@ gulp.task('tsBuild', ['ts'], function(){
 ////////////////////// GLOBAL BUILD TASK //////////////////////
 
 gulp.task('build', ['ts'], function(){
-  if (buildProduction) {
-    gulp.start('minifyScripts');
-  } else {
-    gulp.start('jsBrowserify');
-  }
   gulp.start('bower');
   gulp.start('sassBuild');
 });
