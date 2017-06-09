@@ -4,6 +4,7 @@ import { Animal } from './animal.model';
 @Component({
 	selector: 'animal-list',
 	template: `
+	<h2>Animal List</h2>
 	<div class="well sorts">
 		<div class="row">
 			<div class="col-sm-6">
@@ -28,7 +29,7 @@ import { Animal } from './animal.model';
 	<div class="row">
 		<div class="col-sm-4" *ngFor="let currentAnimal of childAnimalList | ageSort:filterByAge | dietSort:filterByDiet">
 			<img class="animal-photo" src="{{currentAnimal.photo}}">
-			<div class="animal">
+			<div class="well animal">
 				<p><strong>Species:</strong> {{currentAnimal.species}}</p>
 				<p><strong>Animal Name:</strong> {{currentAnimal.name}}</p>
 				<p><strong>Age:</strong> {{currentAnimal.age}}</p>

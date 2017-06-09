@@ -8,7 +8,6 @@ import { Animal } from './animal.model';
 		<h1 id="head" >Animal Tracker</h1>
 	</div>
 	<div class="container">
-		<h2>Animal List</h2>
 		<animal-list  [childAnimalList]="masterAnimalList" (clickSender)="editAnimal($event)"></animal-list>
 		<edit-animal [childSelectedAnimal]="selectedAnimal" (doneButtonClickedSender)="finishedEditing()"></edit-animal>
 		<hr>

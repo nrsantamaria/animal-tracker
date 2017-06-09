@@ -6,8 +6,8 @@ import  { Animal } from './animal.model';
 	template:`
 	<div *ngIf="childSelectedAnimal">
   <hr>
-		<h3>Edit Animal:</h3>
-    <h4>{{childSelectedAnimal.species}}: {{childSelectedAnimal.name}}</h4>
+		<h2>Edit Animal</h2>
+    <h2>{{childSelectedAnimal.species}}: {{childSelectedAnimal.name}}</h2>
 		<br>
 		<div class="well">
 			<div class="row">

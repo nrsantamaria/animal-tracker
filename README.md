@@ -47,3 +47,5 @@ This software is licensed under MIT license.
 Copyright (c) 2017 Nicole Santamaria
 
 ![home-page](resources/images/home-page.png)
+![edit](resources/images/edit.png)
+![add-new](resources/images/add-new.png)
