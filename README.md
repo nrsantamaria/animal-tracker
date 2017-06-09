@@ -9,7 +9,6 @@ This app can be used by zookeepers as a tracker for animals.
 * User will be able to view a list of animals that have been logged. (Animal List Component)
 * User will be able to click an animal to edit its name, age or caretakers. (Edit Animal Component)
 * User will be able to view all animals, only young animals (less than 2 years of age), or only mature animals (more than 2 years of age). (Pipe Age)
-* User will be able to sort by animal species. (Pipe Species)
 * User will be able to sort by diet. (Pipe Diet)
 
 ## Prerequisites
